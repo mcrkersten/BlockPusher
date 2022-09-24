@@ -546,10 +546,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6763241760848157177}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2fe4bf5964592a4985821ddd2059856, type: 3}
+  m_Script: {fileID: 11500000, guid: 255dfffcd3e6d5643abbff5730796c81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _acceleration: 60
+  _acceleration: 100
 --- !u!114 &7007556719778614505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,6 +576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c6ae609751628d4896911ae4d354eed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _randomTorque: 0
   _explosionForce: 250
   _explosionRadius: 10
   _shardParent: {fileID: 3171993581442185543}
