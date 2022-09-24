@@ -18,7 +18,7 @@ public class Player : MonoBehaviour, IGravity
     public delegate void OnGameOver(bool finished);
 
     /// <summary>
-    /// Called when powerop-gameObject collides with player
+    /// Called when powerup-gameObject collides with player
     /// </summary>
     public static event OnPowerUp _powerUp;
     public delegate void OnPowerUp();
