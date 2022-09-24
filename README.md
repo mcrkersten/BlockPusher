@@ -1,4 +1,5 @@
 Play game in WebGL here: https://mcrkersten.github.io/BP_WebGL/
+Zipped build works best with gamepad.
 
 Donderdag eind van middag;
 - Begin opgezet van de player controller via het nieuwe Unity.Input systeem.
