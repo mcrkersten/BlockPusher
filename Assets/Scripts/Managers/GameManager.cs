@@ -30,10 +30,11 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
+        //Activate blackoutmenu and animation
         _menuManager.ActivateMenu(3);
         Time.timeScale = 1;
 
-        //Delay tween
+        //Delay tween till halfway blackout and restart game
         float angle = 0;
         DOTween.To(() => angle, x => angle = x, 360, .5f)
             .OnComplete(() => {
