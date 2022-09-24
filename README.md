@@ -1,7 +1,7 @@
 Play game in WebGL here: https://mcrkersten.github.io/BP_WebGL/
 
 Donderdag eind van middag;
-- Begin opgezet van de player controler via het nieuwe Unity.Input systeem.
+- Begin opgezet van de player controller via het nieuwe Unity.Input systeem.
 - Begin opgezet van het ObjectType systeem.
 5 uur.
 
