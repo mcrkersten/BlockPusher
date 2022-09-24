@@ -7,7 +7,7 @@ Donderdag eind van middag;
 
 Vrijdag:
 - Scriptable object systeem gemaakt waarbij de developer snel het type Obstacle kan updaten via ObstacleType.
-Na het veranderen van het variabele kan de developer via een linker muis klik in de inspector een "ForceUpdate" methode uitvoeren.
+Na het veranderen van het variabele kan de developer via een linker muisklik in de inspector een "ForceUpdate" methode uitvoeren.
 Dan zal het object de variabelen van het geselecteerde ObstacleType overnemen. Material, Colliders, Mass en Drag.
 - Gameloop De speler kan nu GameOver gaan en winnen. 
 - Begin van Menu systeem opgezet.
