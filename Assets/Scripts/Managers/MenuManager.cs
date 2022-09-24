@@ -11,7 +11,7 @@ public class MenuManager
     [SerializeField] private List<Menu> _menus = new List<Menu>();
 
     /// <summary>
-    /// Set the return values of all animated objects
+    /// Set the return/start values of all animated objects
     /// </summary>
     public void InitLoopbacks()
     {
@@ -43,7 +43,7 @@ public class MenuManager
     /// <summary>
     /// Returns true if given menu-index is active
     /// </summary>
-    public bool IsActive(int menuIndex)
+    public bool IsMenuActive(int menuIndex)
     {
         if (_menus[menuIndex]._menu.activeSelf)
             return true;
@@ -73,7 +73,7 @@ public class AnimationSequence
     public void InitLoopbackpoint()
     {
         foreach (Animation animation in _animations)
-            animation.SetLoopbackPoint();
+            animation.SetLoopbackPoints();
     }
 }
 
@@ -84,16 +84,16 @@ public class Animation
     [SerializeField] private float _lenght;
     [SerializeField] private float _delay;
 
+    //All Transforms go through all AnimationKeys
     [SerializeField] private List<Transform> _toAnimate = new List<Transform>();
     [SerializeField] private List<AnimationKeys> _animationKeys = new List<AnimationKeys>();
 
     public void Animate()
     {
         ResetAnimations();
-        int index = 0;
         foreach (AnimationKeys key in _animationKeys)
         {
-            index = 0;
+            int index = 0;
             foreach (var transform in _toAnimate)
                 AnimateKey(transform, key, index++);
         }
@@ -136,10 +136,9 @@ public class Animation
 
     private void ResetAnimations()
     {
-        int index = 0;
         foreach (AnimationKeys key in _animationKeys)
         {
-            index = 0;
+            int index = 0;
             foreach (var transform in _toAnimate)
                 ResetAnimateKey(transform, key, index++);
         }
@@ -163,7 +162,10 @@ public class Animation
         }
     }
 
-    public void SetLoopbackPoint()
+    /// <summary>
+    /// Retrieve start value of all animated transforms and set as LoopBackPoint
+    /// </summary>
+    public void SetLoopbackPoints()
     {
         for (int i = 0; i < _animationKeys.Count; i++)
         {
@@ -197,6 +199,7 @@ public class Animation
         public Ease _ease;
         public bool _loopBack;
 
+        //Each animated transform has it's own loopback point
         [HideInInspector] public List<Vector3> _loopBackPoint = new List<Vector3>();
     }
 

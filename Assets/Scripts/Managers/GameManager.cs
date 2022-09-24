@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
     /// Get's called by key and gamepad input
     private void OnPauseGame(InputAction.CallbackContext obj)
     {
-        if (_menuManager.IsActive(0))
+        if (_menuManager.IsMenuActive(0))
         {
             _menuManager.DeactivateAll();
             Time.timeScale = 1;
